@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .circle {
+            width: 300px; 
+            height: 300px;
+            border: 6px solid orange; 
+            border-radius: 50%; 
+            margin-bottom: 20px;
+            position: relative; 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+        .timer__block {
+            color: white;
+            text-align: center; 
+            font-size: 50px;
+        }
+
+        .button-container {
+            display: flex; 
+            justify-content: space-between; 
+            width: 100%; 
+            max-width: 300px;
+        }
+
+        #reset {
+            background-color: darkviolet;
+        }
+
+        .button {
+            width: 70px; 
+            height: 70px; 
+            border: none; 
+            border-radius: 50%;
+            background-color: gray; 
+            color: white;
+            cursor: pointer;
+            font-size: 16px; 
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            transition: background-color 0.3s; 
+        }
+
+        .button.stop {
+            background-color: red; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="circle">
+        <div class="timer__block">
+            <span id="hours">0:</span>
+            <span id="minutes">1:</span>
+            <span id="seconds">1</span>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button class="button" id="reset">Reset</button>
+        <button class="button" id="start">Start</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
